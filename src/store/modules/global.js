@@ -1,5 +1,5 @@
 const state = {
-  data:[]
+  data:[{id:1,name:'test'}]
 }
 
 /**
@@ -19,8 +19,8 @@ const getters = {
  * https://vuex.vuejs.org/zh/guide/actions.html
  */
 const actions = {
-  updateData(context){
-    context.commit('updateData');
+  updateData(context,data){
+    context.commit('updateData',data);
   }
 }
 

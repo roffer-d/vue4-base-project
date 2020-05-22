@@ -1,7 +1,10 @@
+import Vue from 'vue'
 import Vuex from 'vuex'
 import createLogger from 'vuex/dist/logger'
 
-import common from './modules/commonStore'
+Vue.use(Vuex)
+
+import common from './modules/global'
 
 const debug = process.env.NODE_ENV !== 'production'
 
