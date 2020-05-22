@@ -1,4 +1,4 @@
-# base
+# vue4-base-project
 
 ## Project setup
 ```
