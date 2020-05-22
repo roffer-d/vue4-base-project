@@ -2,6 +2,7 @@
     <div>
         <h1>首页</h1>
         {{data}}
+        <router-view />
     </div>
 </template>
 

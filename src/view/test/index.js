@@ -1,10 +1,10 @@
 import test from './test'
 
-const router = [
+const routes = [
     {
         path:'/test',
         name:'test',
         component:test
     }
 ]
-export {router}
+export {routes}
