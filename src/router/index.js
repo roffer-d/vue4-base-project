@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import index from '@/view/index'
+import home from '@/view/home'
 
 Vue.use(VueRouter);
 
@@ -34,11 +34,11 @@ configRouters = configRouters.concat(rootRouters);
 const routes = [
     {
         path: '/',
-        redirect: '/index'
+        redirect: '/home'
     },
     {
-        path: '/index',
-        component:index,
+        path: '/home',
+        component:home,
         children: configRouters
     }
 ];
