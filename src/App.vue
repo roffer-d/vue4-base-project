@@ -1,26 +1,38 @@
 <template>
-  <div id="app">
+  <div>
+    <h1>首页</h1>
+    {{data}}
     <router-view />
   </div>
 </template>
 
 <script>
+  import {mapActions,mapMutations,mapGetters} from 'vuex'
 
-export default {
-  name: 'App',
-  components: {
+  export default {
+    name: "index",
+    computed:{
+      ...mapGetters({
+        //使用带名字空间store
+        data: 'common/data',
+      })
+    },
+    data(){
+      return{
 
+      }
+    },
+    mounted() {
+      this.update(this.data.concat([{id:2,name:'test2'}]))
+    },
+    methods:{
+      ...mapActions({
+        update: 'common/updateData' // 将 `this.update()` 映射为 `this.$store.dispatch('updateData')`
+      })
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+
 </style>
