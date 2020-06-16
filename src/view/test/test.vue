@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>test</h1>
+        <more height="100px" :show="true"><h1>test</h1></more>
     </div>
 </template>
 

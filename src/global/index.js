@@ -3,6 +3,7 @@ import utils from "./utils"
 import http from './axios-config'
 import socket from './web-socket'
 import iView from 'iview'
+import custom from '../components/custom'
 
 const config = {
     constant,
@@ -16,6 +17,8 @@ export default {
         if(this.installed)return true
 
         Vue.use(iView)
+        Vue.use(custom)
+
         Vue.config.productionTip = false
 
         for(let key in config){
