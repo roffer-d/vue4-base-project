@@ -4,6 +4,7 @@ import http from './axios-config'
 import socket from './web-socket'
 import iView from 'iview'
 import custom from '../components/custom'
+import filter from "./filter"
 
 const config = {
     constant,
@@ -18,6 +19,7 @@ export default {
 
         Vue.use(iView)
         Vue.use(custom)
+        Vue.use(filter)
 
         Vue.config.productionTip = false
 

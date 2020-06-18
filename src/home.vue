@@ -1,5 +1,6 @@
 <template>
     <div>
+        {{'超过指定长度的文字会被截取'|ellipsis(10)}}
         <router-view />
     </div>
 </template>
