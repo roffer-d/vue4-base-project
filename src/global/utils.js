@@ -148,6 +148,29 @@ function formatFileSize(size, pointLength, units) {
   return (unit === 'B' ? size : size.toFixed(pointLength || 2)) + unit;
 }
 
+/**
+ * @desc 输入框获取焦点之后，将光标移动到内容末尾
+ * @param {Document} obj 操作的input
+ * @param {参数类型} 参数名称 参数介绍
+ * @param {参数类型} 参数名称 参数介绍
+ * @date 2020-06-18 11:17:53
+ * @author Dulongfei
+ *
+ */
+function moveEnd(obj) {
+  obj.focus();
+  let len = obj.value.length;
+  if (document.selection) {
+    let sel = obj.createTextRange();
+    sel.moveStart('character', len);
+    sel.collapse();
+    sel.select();
+  } else if (typeof obj.selectionStart == 'number'
+      && typeof obj.selectionEnd == 'number') {
+    obj.selectionStart = obj.selectionEnd = len;
+  }
+}
+
 export default {
   dateFormat,
   numberFormat,
@@ -155,6 +178,7 @@ export default {
   clone,
   randomId,
   uuid,
+  moveEnd,
   getKeys,
   isInTarget,
   formatFileSize
