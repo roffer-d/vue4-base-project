@@ -21,11 +21,13 @@
             }
         },
         mounted() {
+            this.test()
             this.update(this.data.concat([{id:2,name:'test2'}]))
         },
         methods:{
             ...mapActions({
-                update: 'common/updateData' // 将 `this.update()` 映射为 `this.$store.dispatch('updateData')`
+                update: 'common/updateData', // 将 `this.update()` 映射为 `this.$store.dispatch('updateData')`
+                test:'teststore/update'
             })
         }
     }
