@@ -7,7 +7,6 @@
 
 <script>
     import {mapActions,mapMutations,mapGetters} from 'vuex'
-
     export default {
         name: "index",
         computed:{
